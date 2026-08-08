@@ -240,12 +240,12 @@ export default function BakeyardPage() {
           Directions
         </a>
         <a
-          href={WHATSAPP_URL}
+          href="https://linktr.ee/ka.nacoffee"
           target="_blank"
           rel="noopener noreferrer"
-          className={`${styles.mobileCtaLink} ${styles.mobileCtaWhatsapp}`}
+          className={`${styles.mobileCtaLink} ${styles.mobileCtaLinktree}`}
         >
-          WhatsApp
+          Linktree
         </a>
       </div>
       <div className={styles.mobileCtaSpacer} />
