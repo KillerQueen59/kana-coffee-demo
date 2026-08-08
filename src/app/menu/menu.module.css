@@ -1,0 +1,491 @@
+.page {
+  background: var(--bg);
+  color: var(--ink);
+  transition:
+    background 0.35s,
+    color 0.35s;
+  overflow-x: hidden;
+}
+
+/* NAV */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px clamp(16px, 4vw, 40px);
+  background: var(--bg);
+  border-bottom: 2px solid var(--line);
+  transition: background 0.35s;
+}
+
+.navBrand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  color: var(--ink);
+}
+
+.navBrandLogo {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+
+.navBrandText {
+  font-family: var(--font-baloo);
+  font-weight: 800;
+  font-size: 21px;
+  letter-spacing: 0.5px;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.navLink {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--ink);
+  padding: 10px 14px;
+  border-radius: 999px;
+  transition: background 0.2s;
+}
+
+.navLink:hover {
+  background: rgba(138, 59, 31, 0.14);
+}
+
+/* HEADER */
+.header {
+  padding: clamp(32px, 5vw, 60px) clamp(16px, 4vw, 56px) clamp(20px, 3vw, 36px);
+  background-image: var(--kaw);
+  background-size: 96px;
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: var(--font-baloo);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--sub);
+}
+
+.title {
+  font-family: var(--font-anton);
+  font-size: clamp(38px, 6vw, 64px);
+  color: var(--ink);
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.titleAccent {
+  font-family: var(--font-playfair);
+  font-style: italic;
+  color: var(--accent);
+  text-transform: none;
+}
+
+.subtitle {
+  font-size: 13.5px;
+  color: var(--sub);
+  margin-top: 12px;
+}
+
+.subtitleStrong {
+  font-family: var(--font-baloo);
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* CATEGORY CHIPS */
+.chipsBar {
+  position: sticky;
+  top: 70px;
+  z-index: 40;
+  padding: 10px clamp(16px, 4vw, 56px);
+  background: var(--bg);
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  border-bottom: 1px dotted var(--dot);
+}
+
+.chip {
+  flex: none;
+  border: 2px solid var(--line);
+  color: var(--ink);
+  font-family: var(--font-baloo);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.chip:hover {
+  background: rgba(138, 59, 31, 0.14);
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(24px, 4vw, 48px) clamp(16px, 4vw, 56px) clamp(48px, 6vw, 80px);
+}
+
+/* CATEGORY */
+.category {
+  margin-top: 44px;
+  scroll-margin-top: 140px;
+}
+
+.category:first-child {
+  margin-top: 8px;
+}
+
+.categoryHead {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.categoryDot {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-image: url("/assets/kawung-cream.svg");
+  background-size: 34px;
+  background-position: center;
+  flex: none;
+}
+
+.categoryTitle {
+  font-family: var(--font-anton);
+  font-size: clamp(24px, 3vw, 32px);
+  color: var(--ink);
+  text-transform: uppercase;
+}
+
+.categoryRule {
+  flex: 1;
+  border-bottom: 2px solid var(--line);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  gap: 0 48px;
+  margin-top: 14px;
+}
+
+/* ITEM ROW */
+.itemWrap {
+  position: relative;
+}
+
+.item {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  width: 100%;
+  padding: 15px 0;
+  border: none;
+  border-bottom: 1px dotted var(--dot);
+  background: none;
+  font: inherit;
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+}
+
+.itemBody {
+  min-width: 0;
+}
+
+.itemName {
+  font-family: var(--font-baloo);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--ink);
+}
+
+.itemBadge {
+  background: #8a3b1f;
+  color: #f2ead9;
+  font-family: var(--font-baloo);
+  font-weight: 700;
+  font-size: 10px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  margin-left: 6px;
+  white-space: nowrap;
+}
+
+.itemNote {
+  font-size: 11px;
+  color: var(--sub);
+}
+
+.itemFill {
+  flex: 1;
+  border-bottom: 1px dotted var(--dot);
+  min-width: 20px;
+}
+
+.itemPrice {
+  font-family: var(--font-baloo);
+  font-weight: 800;
+  font-size: 17px;
+  color: var(--accent);
+}
+
+/* ITEM DETAIL CARD (hover / tap) */
+.detailCard {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  z-index: 30;
+  background: var(--paper);
+  border: 2px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition:
+    opacity 0.18s,
+    transform 0.18s,
+    visibility 0.18s;
+  pointer-events: none;
+}
+
+.detailCard[data-open="true"] {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.detailPhoto {
+  position: relative;
+  height: 140px;
+  background-image: url("/assets/kawung-cream.svg");
+  background-size: 40px;
+}
+
+.detailPhotoImg {
+  object-fit: cover;
+}
+
+.detailPhotoFallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-baloo);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: #f2ead9;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.detailBody {
+  padding: 14px 16px 16px;
+}
+
+.detailHead {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.detailName {
+  font-family: var(--font-baloo);
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--pink);
+}
+
+.detailDesc {
+  font-size: 12.5px;
+  color: var(--sub);
+  line-height: 1.5;
+  margin-top: 8px;
+}
+
+.detailPrice {
+  font-family: var(--font-baloo);
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--accent);
+  margin-top: 10px;
+}
+
+.footnote {
+  margin-top: 14px;
+  display: inline-block;
+  background: var(--paper);
+  border: 2px dashed var(--dot);
+  color: var(--pink);
+  font-size: 12.5px;
+  padding: 9px 14px;
+}
+
+.footnoteStrong {
+  color: var(--accent);
+}
+
+/* BAKEYARD CROSSLINK */
+.crosslink {
+  margin-top: 52px;
+  background: #2b2320;
+  color: #f2ead9;
+  padding: clamp(24px, 4vw, 40px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.crosslinkTitle {
+  font-family: var(--font-anton);
+  font-size: clamp(22px, 3vw, 30px);
+  text-transform: uppercase;
+}
+
+.crosslinkSub {
+  font-size: 13.5px;
+  color: #d9c7a7;
+  margin-top: 6px;
+}
+
+.crosslinkCta {
+  background: #8a3b1f;
+  color: #f2ead9;
+  font-family: var(--font-baloo);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  box-sizing: border-box;
+  transition: transform 0.2s;
+}
+
+.crosslinkCta:hover {
+  transform: translateY(-3px);
+}
+
+.priceNote {
+  text-align: center;
+  font-size: 12.5px;
+  color: var(--sub);
+  margin-top: 28px;
+}
+
+/* FOOTER */
+.footer {
+  background: #2b2320;
+  color: #d9c7a7;
+  padding: clamp(24px, 3vw, 36px) clamp(16px, 4vw, 56px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.footerBrand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #f2ead9;
+}
+
+.footerBrandLogo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.footerBrandText {
+  font-family: var(--font-baloo);
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.footerCopy {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.footerStrip {
+  height: 20px;
+  background: #8a3b1f;
+  background-image: url("/assets/kawung-cream.svg");
+  background-size: 40px;
+}
+
+/* MOBILE STICKY CTA */
+.mobileCta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 55;
+  display: flex;
+  gap: 10px;
+  padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+  background: #2b2320;
+  box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.mobileCtaLink {
+  flex: 1;
+  color: #f2ead9;
+  font-family: var(--font-baloo);
+  font-weight: 700;
+  font-size: 15px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+}
+
+.mobileCtaDirections {
+  background: #8a3b1f;
+}
+
+.mobileCtaWhatsapp {
+  background: #6b7a4f;
+}
+
+.mobileCtaSpacer {
+  height: 72px;
+}

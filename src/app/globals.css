@@ -1,0 +1,77 @@
+:root {
+  --bg: #e9dfc8;
+  --bg2: #d9c7a7;
+  --ink: #2b2320;
+  --sub: #5c3a28;
+  --paper: #f2ead9;
+  --pink: #2b2320;
+  --card2: #d9c7a7;
+  --accent: #8a3b1f;
+  --line: #2b2320;
+  --shadow: #2b2320;
+  --dot: #8a3b1f;
+  --mapbg: #d9c7a7;
+  --kaw: url("/assets/kawung-terra-soft.svg");
+}
+
+:root.dark {
+  --bg: #241c17;
+  --bg2: #1c1512;
+  --ink: #f2ead9;
+  --sub: #d9c7a7;
+  --paper: #332822;
+  --pink: #f2ead9;
+  --card2: #3a2d24;
+  --accent: #e8996b;
+  --line: rgba(242, 234, 217, 0.25);
+  --shadow: #0f0b09;
+  --dot: #e8996b;
+  --mapbg: #2b2320;
+  --kaw: url("/assets/kawung-dark-soft.svg");
+}
+
+@keyframes kmarq {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+a {
+  text-decoration: none;
+}
+
+.only-desktop {
+  display: contents;
+}
+
+.only-mobile {
+  display: none;
+}
+
+@media (max-width: 759px) {
+  .only-desktop {
+    display: none;
+  }
+
+  .only-mobile {
+    display: contents;
+  }
+}
