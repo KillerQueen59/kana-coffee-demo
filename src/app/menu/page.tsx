@@ -12,7 +12,6 @@ export const metadata: Metadata = {
 
 const MAPS_URL =
   "https://maps.google.com/?q=KA/NA+Coffee+Jl.+Merak+No.+2+Tanah+Sareal+Bogor";
-const WHATSAPP_URL = "https://wa.me/62";
 
 export default function MenuPage() {
   return (
@@ -113,12 +112,12 @@ export default function MenuPage() {
             Directions
           </a>
           <a
-            href={WHATSAPP_URL}
+            href="https://linktr.ee/ka.nacoffee"
             target="_blank"
             rel="noopener noreferrer"
-            className={`${styles.mobileCtaLink} ${styles.mobileCtaWhatsapp}`}
+            className={`${styles.mobileCtaLink} ${styles.mobileCtaLinktree}`}
           >
-            WhatsApp
+            Linktree
           </a>
         </div>
         <div className={styles.mobileCtaSpacer} />

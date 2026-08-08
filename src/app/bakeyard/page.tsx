@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 
 const MAPS_URL =
   "https://maps.google.com/?q=KA/NA+Coffee+Jl.+Merak+No.+2+Tanah+Sareal+Bogor";
-const WHATSAPP_URL = "https://wa.me/62";
 const IG_URL = "https://instagram.com/ka.nacoffee";
 
 const lineup = [
@@ -194,12 +193,12 @@ export default function BakeyardPage() {
             Ke KA/NA Sekarang
           </a>
           <a
-            href={WHATSAPP_URL}
+            href="https://linktr.ee/ka.nacoffee"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.visitCtaSecondary}
           >
-            Chat WhatsApp
+            Linktree
           </a>
         </div>
       </div>
